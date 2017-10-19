@@ -4,10 +4,15 @@ import numpy as np
 import pyedflib
 import os.path
 import matplotlib.pyplot as plt
+import audioop 
+import scipy.signal as signal
 
 #Load: we would like to load EDF files and print out the first data structure 
 #Note: code was used in Gustavo Chavez laptop thus directory should be changed as needed.
 
+
+
+#This script is intended to test signal, butter, EDF reader to use for feature extraction.
 def loadSingleEDF():
 	print("We are loading data found in chb01_01\n\n")
 	directory = "/Users/gustavochavez/Documents/GitHub/CS221Project/tests/testData/chb01_01.edf"
@@ -39,7 +44,61 @@ def makePlotChannel1FiveSeconds(data):
 	plt.title('First 5 seconds of EEG channel 1 of Pt1')
 	plt.grid(True)
 
+	#plt.show()
+	return channel_1
+
+def calculateRMS(signal):
+	timeLength = 2 # We are calating the energy of signal per second, over a 2 second period
+	return np.sqrt(np.dot(signal,signal) / timeLength)
+
+def butter_bandpass(lowcut, highcut, fs, order=5):
+    nyq = 0.5 * fs
+    low = lowcut / nyq
+    high = highcut / nyq
+    b, a = signal.butter(order, [low, high], btype='band')
+    return b, a
+
+def butter_bandpass_filter(data, lowcut, highcut, fs, order=5):
+    b, a = butter_bandpass(lowcut, highcut, fs, order=order)
+    y = signal.lfilter(b, a, data)
+    return y
+def makePlotWithFiltered(unfiltered):
+	#Make butterworth filters one for 1-12 hz 
+	fs = 256.0
+	low = 1
+	med= 12
+	high = 24
+	t = np.arange(0.0,5.0,.00390625)
+	plt.plot(t,unfiltered, label="Unfiltered")
+	filtered = butter_bandpass_filter(channel_1,low,med,fs)
+	plt.plot(t,filtered,label="low band")
+	filtered2 = butter_bandpass_filter(channel_1,med,high,fs)
+	plt.plot(t,filtered2,label="high band")
 	plt.show()
 
+
 data = loadSingleEDF()
-makePlotChannel1FiveSeconds(data)
+channel_1 = makePlotChannel1FiveSeconds(data)
+
+width = len(channel_1)
+makePlotWithFiltered(channel_1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

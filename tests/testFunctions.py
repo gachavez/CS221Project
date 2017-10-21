@@ -21,12 +21,17 @@ def loadSingleEDF():
 	print("The file has "+ str(n) +" signals in file")
 	signal_labels = f.getSignalLabels()
 	print("Signal labels are "+str(signal_labels)+ "which correspond to channels of EEG")
+	print("The 5th signal is " + signal_labels[4])
+	print("which should return same " + str(signal_labels.index(signal_labels[4])))
 	sigbufs = np.zeros((n, f.getNSamples()[0]))
 	for i in np.arange(n):
 		sigbufs[i, :] = f.readSignal(i)
-
+	print("signal_labels has entry type " + str(type(signal_labels[0])))
 	print("the number of signals in each channel is "+ str(f.getNSamples()[0]))
 	print("sigbufs is " + str(sigbufs) +" and has a length of "+ str(len(sigbufs)))
+	listI = [1,2,3]
+	subseg = [sigbufs[i] for i in listI]
+	print("shape of subseg is " + str(len(subseg)))
 	return sigbufs
 
 #Takes in data created from loadSingleEDF file and makes a pyplot of first 5 seconds
@@ -81,7 +86,7 @@ data = loadSingleEDF()
 channel_1 = makePlotChannel1FiveSeconds(data)
 
 width = len(channel_1)
-makePlotWithFiltered(channel_1)
+#makePlotWithFiltered(channel_1)
 
 
 

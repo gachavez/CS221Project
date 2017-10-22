@@ -1,14 +1,7 @@
 #imports
 import os
 import util_feature_extraction as util
-
-#main 
-	
-	#open each patient directory 
-		# for each data file ending in edf
-			#create csv file with name pt_#_file_#.csv = extract_features(file)
-			#---> csv each row is feature vector of length 32 = 16 
-			#channels * 2 filters/
+import numpy as np
 
 def main():
 
@@ -19,11 +12,31 @@ def main():
 	for patient in patients:
 		patient_dir = parent_dir +"/"+  patient
 		#print(patient_dir)
-		files = [s for s in os.listdir(patient_dir) if "chb" in s and ".txt" not in s]
+		files = [s for s in os.listdir(patient_dir) if "chb" in s and ".txt" not in s and ".seizures" not in s]
 		for file in files:
+			print("Processing file:" + file)
 			file_dir = patient_dir +"/"+  file
 			#print("\t" + file_dir)
-			raw_signal, signal_labels = util.loadSingleEDF(file_dir,signal_labels)
+			raw_signal, signal_labels = util.loadSingleEDF(file_dir)
 			feature_matrix = util.extract_features_2(raw_signal,signal_labels)
-			np.savetxt(file + ".csv",feature_matrix,delimiter =",")
+			np.savetxt("/Users/gustavochavez/Documents/GitHub/CS221Project/feature_extraction_output/" + file + ".csv",feature_matrix,delimiter =",")
+
+def data_labeling():
+	#get labels from txt files 
+	#find feature vectors from feature_extraction_output folder
+		#for each feature vector = find intervals where seizure occured
+			#label as 1 
+		#else 
+			#label as 0 
+		#resave csv file 
+
+	parent_dir = "/Users/gustavochavez/Documents/Data/CS221_project_data/physionet.org/pn6/chbmit"
+	patients = [s for s in os.listdir(parent_dir) if "chb" in s]
+	for patient in patients:
+		patient_dir = parent_dir +"/"+  patient
+		#print(patient_dir)
+		files = [s for s in os.listdir(patient_dir) if "chb" in s and ".txt" in s and ".seizures" not in s]
+		labels = find_start_stop_seziures(files)
+		label_data(patient,labels)			
+
 main()

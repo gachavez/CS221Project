@@ -57,7 +57,8 @@ def extract_features_2(raw_signal,signal_labels):
 	med= 12
 	high = 24
 	num_filters = 2
-	signals = ["FP1-F7","F7-T7"]
+	#note that gustavo deleted , "F8-T8" which was the 17th common channel in all data files because 16 was planned for
+	signals = ["F4-C4", "C3-P3", "P7-O1", "P8-O2", "F7-T7", "FZ-CZ", "F3-C3", "FP2-F8", "FP2-F4", "P3-O1", "T7-P7", "CZ-PZ", "C4-P4", "P4-O2", "FP1-F7", "FP1-F3"]
 
 	indexes = []
 
@@ -107,7 +108,7 @@ def extract_features_8(raw_signal,signal_labels):
 	filtered = []
 	for channel in channels:
 		#figure how how to make list of functions that does filtering 
-		for i in xrange(0,8)
+		for i in xrange(0,8):
 			filtered.extend([butter_bandpass_filter(channel,i*filter_band_width + low,(i + 1) * filter_band_width + low,fs)])
 
 	for seg in xrange(0,num_2_sec_segments):
@@ -115,3 +116,76 @@ def extract_features_8(raw_signal,signal_labels):
 			feature_matrix[seg,i] = calculateRMS(filtered_signal[seg*samples_per_seg:seg*samples_per_seg + samples_per_seg])
 	
 	return feature_matrix
+def representsInt(s):
+    try: 
+        int(s)
+        return True
+    except ValueError:
+        return False
+def loadLabels():
+	file_object  = open("/Users/gustavochavez/Documents/GitHub/CS221Project/feature_extraction/labels.txt", 'r')
+	text = file_object.readlines() 
+	end = len(text)
+	current_line = 0
+	labels = {} 
+	while(current_line < end):
+		key = text[current_line]
+		#remove \n symbol
+		key = key.replace("\n", "")
+		key = key.split("/")[1]
+		value = []
+		current_line = current_line + 1
+		while(text[current_line][0] != "c"): 
+			index = 3
+			if (representsInt(text[current_line].split(" ")[3])):
+				index = 3
+			else:
+				index = 4
+			start_time = text[current_line].split(" ")[index]
+			end_time   = text[current_line + 1].split(" ")[index]
+			value.append((int(start_time),int(end_time)))
+			current_line = current_line + 2
+			if current_line >= end:
+				break
+		
+		labels[key] = value
+	return labels
+def label(directory, labels):
+
+	data = np.loadtxt(open(directory, "rb"), delimiter=",")
+	H,W = data.shape
+	label_col = np.zeros((H,1))
+	label_col_oracle =  np.zeros((H,1))
+	print(str(labels))
+	for label in labels:
+		start_row = label[0] // 2
+		end_row   = label[1] // 2
+		label_col[start_row:end_row + 1] = 1
+		oracle_start = start_row - 30
+		oracle_end = end_row + 30
+		if oracle_start < 0:
+			oracle_start = 0
+		if oracle_start >= H - 1:
+			oracle_end =  H - 1
+		label_col_oracle[oracle_start:oracle_end + 1] = 1
+	if sum(label_col )!= 0: 
+		print(str(label_col))
+	data = np.hstack((data,label_col))
+	data = np.hstack((data,label_col_oracle))
+	np.savetxt(directory,data,delimiter =",")
+
+
+def countChannels(directory, channels): 
+	f = pyedflib.EdfReader(directory)
+	n = f.signals_in_file
+	signal_labels = f.getSignalLabels()
+	for channel in signal_labels:
+		if channel in channels.keys():
+			channels[channel] = channels[channel] + 1
+		else:
+			channels[channel] = 0 
+
+
+
+
+

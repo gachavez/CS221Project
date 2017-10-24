@@ -1,0 +1,533 @@
+chb01/chb01_03.edf
+Seizure Start Time: 2996 seconds
+Seizure End Time: 3036 seconds
+chb01/chb01_04.edf
+Seizure Start Time: 1467 seconds
+Seizure End Time: 1494 seconds
+chb01/chb01_15.edf
+Seizure Start Time: 1732 seconds
+Seizure End Time: 1772 seconds
+chb01/chb01_16.edf
+Seizure Start Time: 1015 seconds
+Seizure End Time: 1066 seconds
+chb01/chb01_18.edf
+Seizure Start Time: 1720 seconds
+Seizure End Time: 1810 seconds
+chb01/chb01_21.edf
+Seizure Start Time: 327 seconds
+Seizure End Time: 420 seconds
+chb01/chb01_26.edf
+Seizure Start Time: 1862 seconds
+Seizure End Time: 1963 seconds
+chb02/chb02_16.edf
+Seizure Start Time: 130 seconds
+Seizure End Time: 212 seconds
+chb02/chb02_16+.edf
+Seizure Start Time: 2972 seconds
+Seizure End Time: 3053 seconds
+chb02/chb02_19.edf
+Seizure Start Time: 3369 seconds
+Seizure End Time: 3378 seconds
+chb03/chb03_01.edf
+Seizure Start Time: 362 seconds
+Seizure End Time: 414 seconds
+chb03/chb03_02.edf
+Seizure Start Time: 731 seconds
+Seizure End Time: 796 seconds
+chb03/chb03_03.edf
+Seizure Start Time: 432 seconds
+Seizure End Time: 501 seconds
+chb03/chb03_04.edf
+Seizure Start Time: 2162 seconds
+Seizure End Time: 2214 seconds
+chb03/chb03_34.edf
+Seizure Start Time: 1982 seconds
+Seizure End Time: 2029 seconds
+chb03/chb03_35.edf
+Seizure Start Time: 2592 seconds
+Seizure End Time: 2656 seconds
+chb03/chb03_36.edf
+Seizure Start Time: 1725 seconds
+Seizure End Time: 1778 seconds
+chb04/chb04_05.edf
+Seizure Start Time: 7804 seconds
+Seizure End Time: 7853 seconds
+chb04/chb04_08.edf
+Seizure Start Time: 6446 seconds
+Seizure End Time: 6557 seconds
+chb04/chb04_28.edf
+Seizure 1 Start Time: 1679 seconds
+Seizure 1 End Time: 1781 seconds
+Seizure 2 Start Time: 3782 seconds
+Seizure 2 End Time: 3898 seconds
+chb05/chb05_06.edf
+Seizure Start Time: 417 seconds
+Seizure End Time: 532 seconds
+chb05/chb05_13.edf
+Seizure Start Time: 1086 seconds
+Seizure End Time: 1196 seconds
+chb05/chb05_16.edf
+Seizure Start Time: 2317 seconds
+Seizure End Time: 2413 seconds
+chb05/chb05_17.edf
+Seizure Start Time: 2451 seconds
+Seizure End Time: 2571 seconds
+chb05/chb05_22.edf
+Seizure Start Time: 2348 seconds
+Seizure End Time: 2465 seconds
+chb06/chb06_01.edf
+Seizure 1 Start Time: 1724 seconds
+Seizure 1 End Time: 1738 seconds
+Seizure 2 Start Time: 7461 seconds
+Seizure 2 End Time: 7476 seconds
+Seizure 3 Start Time: 13525 seconds
+Seizure 3 End Time: 13540 seconds
+chb06/chb06_04.edf
+Seizure 1 Start Time: 327 seconds
+Seizure 1 End Time: 347 seconds
+Seizure 2 Start Time: 6211 seconds
+Seizure 2 End Time: 6231 seconds
+chb06/chb06_09.edf
+Seizure 1 Start Time: 12500 seconds
+Seizure 1 End Time: 12516 seconds
+chb06/chb06_10.edf
+Seizure 1 Start Time: 10833 seconds
+Seizure 1 End Time: 10845 seconds
+chb06/chb06_13.edf
+Seizure 1 Start Time: 506 seconds
+Seizure 1 End Time: 519 seconds
+chb06/chb06_18.edf
+Seizure 1 Start Time: 7799 seconds
+Seizure 1 End Time: 7811 seconds
+chb06/chb06_24.edf
+Seizure 1 Start Time: 9387 seconds
+Seizure 1 End Time: 9403 seconds
+chb07/chb07_12.edf
+Seizure 1 Start Time: 4920 seconds
+Seizure 1 End Time: 5006 seconds
+chb07/chb07_13.edf
+Seizure 1 Start Time: 3285 seconds
+Seizure 1 End Time: 3381 seconds
+chb07/chb07_18.edf
+Seizure 1 Start Time: 13688 seconds
+Seizure 1 End Time: 13831 seconds
+chb08/chb08_02.edf
+Seizure 1 Start Time: 2670 seconds
+Seizure 1 End Time: 2841 seconds
+chb08/chb08_05.edf
+Seizure 1 Start Time: 2856 seconds
+Seizure 1 End Time: 3046 seconds
+chb08/chb08_11.edf
+Seizure 1 Start Time: 2988 seconds
+Seizure 1 End Time: 3122 seconds
+chb08/chb08_13.edf
+Seizure 1 Start Time: 2417 seconds
+Seizure 1 End Time: 2577 seconds
+chb08/chb08_21.edf
+Seizure 1 Start Time: 2083 seconds
+Seizure 1 End Time: 2347 seconds
+chb09/chb09_06.edf
+Seizure 1 Start Time: 12231 seconds
+Seizure 1 End Time: 12295 seconds
+chb09/chb09_08.edf
+Seizure 1 Start Time: 2951 seconds
+Seizure 1 End Time: 3030 seconds
+Seizure 2 Start Time: 9196 seconds
+Seizure 1 End Time: 9267 seconds
+chb09/chb09_19.edf
+Seizure 1 Start Time: 5299 seconds
+Seizure 1 End Time: 5361 seconds
+chb10/chb10_12.edf
+Seizure 1 Start Time: 6313 seconds
+Seizure 1 End Time: 6348 seconds
+chb10/chb10_20.edf
+Seizure 1 Start Time: 6888 seconds
+Seizure 1 End Time: 6958 seconds
+chb10/chb10_27.edf
+Seizure 1 Start Time: 2382 seconds
+Seizure 1 End Time: 2447 seconds
+chb10/chb10_30.edf
+Seizure 1 Start Time: 3021 seconds
+Seizure 1 End Time: 3079 seconds
+chb10/chb10_31.edf
+Seizure 1 Start Time: 3801 seconds
+Seizure 1 End Time: 3877 seconds
+chb10/chb10_38.edf
+Seizure 1 Start Time: 4618 seconds
+Seizure 1 End Time: 4707 seconds
+chb10/chb10_89.edf
+Seizure 1 Start Time: 1383 seconds
+Seizure 1 End Time: 1437 seconds
+chb11/chb11_82.edf
+Seizure 1 Start Time: 298 seconds
+Seizure 1 End Time: 320 seconds
+chb11/chb11_92.edf
+Seizure 1 Start Time: 2695 seconds
+Seizure 1 End Time: 2727 seconds
+chb11/chb11_99.edf
+Seizure 1 Start Time: 1454 seconds
+Seizure 1 End Time: 2206 seconds
+chb12/chb12_06.edf
+Seizure 1 Start Time: 1665 seconds
+Seizure 1 End Time: 1726 seconds
+Seizure 2 Start Time: 3415 seconds
+Seizure 2 End Time: 3447 seconds
+chb12/chb12_08.edf
+Seizure 1 Start Time: 1426 seconds
+Seizure 1 End Time: 1439 seconds
+Seizure 2 Start Time: 1591 seconds
+Seizure 2 End Time: 1614 seconds
+Seizure 3 Start Time: 1957 seconds
+Seizure 3 End Time: 1977 seconds
+Seizure 4 Start Time: 2798 seconds
+Seizure 4 End Time: 2824 seconds
+chb12/chb12_09.edf
+Seizure 1 Start Time: 3082 seconds
+Seizure 1 End Time: 3114 seconds
+Seizure 2 Start Time: 3503 seconds
+Seizure 2 End Time: 3535 seconds
+chb12/chb12_10.edf
+Seizure 1 Start Time: 593 seconds
+Seizure 1 End Time: 625 seconds
+Seizure 2 Start Time: 811 seconds
+Seizure 2 End Time: 856 seconds
+chb12/chb12_11.edf
+Seizure 1 Start Time: 1085 seconds
+Seizure 1 End Time: 1122 seconds
+chb12/chb12_23.edf
+Seizure 1 Start Time: 253 seconds
+Seizure 1 End Time: 333 seconds
+Seizure 2 Start Time: 425 seconds
+Seizure 2 End Time: 522 seconds
+Seizure 3 Start Time: 630 seconds
+Seizure 3 End Time: 670 seconds
+chb12/chb12_27.edf
+Seizure 1 Start Time: 916 seconds
+Seizure 1 End Time: 951 seconds
+Seizure 2 Start Time: 1097 seconds
+Seizure 2 End Time: 1124 seconds
+Seizure 3 Start Time: 1728 seconds
+Seizure 3 End Time: 1753 seconds
+Seizure 4 Start Time: 1921 seconds
+Seizure 4 End Time: 1963 seconds
+Seizure 5 Start Time: 2388 seconds
+Seizure 5 End Time: 2440 seconds
+Seizure 6 Start Time: 2621 seconds
+Seizure 6 End Time: 2669 seconds
+chb12/chb12_28.edf
+Seizure 1 Start Time: 181 seconds
+Seizure 1 End Time: 215 seconds
+chb12/chb12_29.edf
+Seizure 1 Start Time: 107 seconds
+Seizure 1 End Time: 146 seconds
+Seizure 2 Start Time: 554 seconds
+Seizure 2 End Time: 592 seconds
+Seizure 3 Start Time: 1163 seconds
+Seizure 3 End Time: 1199 seconds
+Seizure 4 Start Time: 1401 seconds
+Seizure 4 End Time: 1447 seconds
+Seizure 5 Start Time: 1884 seconds
+Seizure 5 End Time: 1921 seconds
+Seizure 6 Start Time: 3557 seconds
+Seizure 6 End Time: 3584 seconds
+chb12/chb12_33.edf
+Seizure 1 Start Time: 2185 seconds
+Seizure 1 End Time: 2206 seconds
+Seizure 2 Start Time: 2427 seconds
+Seizure 2 End Time: 2450 seconds
+chb12/chb12_36.edf
+Seizure 1 Start Time: 653 seconds
+Seizure 1 End Time: 680 seconds
+chb12/chb12_38.edf
+Seizure 1 Start Time: 1548 seconds
+Seizure 1 End Time: 1573 seconds
+Seizure 2 Start Time: 2798 seconds
+Seizure 2 End Time: 2821 seconds
+Seizure 3 Start Time: 2966 seconds
+Seizure 3 End Time: 3009 seconds
+Seizure 4 Start Time: 3146 seconds
+Seizure 4 End Time: 3201 seconds
+Seizure 5 Start Time: 3364 seconds
+Seizure 5 End Time: 3410 seconds
+chb12/chb12_42.edf
+Seizure 1 Start Time: 699 seconds
+Seizure 1 End Time: 750 seconds
+Seizure 2 Start Time: 945 seconds
+Seizure 2 End Time: 973 seconds
+Seizure 3 Start Time: 1170 seconds
+Seizure 3 End Time: 1199 seconds
+Seizure 4 Start Time: 1676 seconds
+Seizure 4 End Time: 1701 seconds
+Seizure 5 Start Time: 2213 seconds
+Seizure 5 End Time: 2236 seconds
+chb13/chb13_19.edf
+Seizure 1 Start Time: 2077 seconds
+Seizure 1 End Time: 2121 seconds
+chb13/chb13_21.edf
+Seizure 1 Start Time: 934 seconds
+Seizure 1 End Time: 1004 seconds
+chb13/chb13_40.edf
+Seizure 1 Start Time: 142 seconds
+Seizure 1 End Time: 173 seconds
+Seizure 2 Start Time: 530 seconds
+Seizure 2 End Time: 594 seconds
+chb13/chb13_55.edf
+Seizure 1 Start Time: 458 seconds
+Seizure 1 End Time: 478 seconds
+Seizure 2 Start Time: 2436 seconds
+Seizure 2 End Time: 2454 seconds
+chb13/chb13_58.edf
+Seizure 1 Start Time: 2474 seconds
+Seizure 1 End Time: 2491 seconds
+chb13/chb13_59.edf
+Seizure 1 Start Time: 3339 seconds
+Seizure 1 End Time: 3401 seconds
+chb13/chb13_60.edf
+Seizure 1 Start Time: 638 seconds
+Seizure 1 End Time: 660 seconds
+chb13/chb13_62.edf
+Seizure 1 Start Time: 851 seconds
+Seizure 1 End Time: 916 seconds
+Seizure 2 Start Time: 1626 seconds
+Seizure 2 End Time: 1691 seconds
+Seizure 3 Start Time: 2664 seconds
+Seizure 3 End Time: 2721 seconds
+chb14/chb14_03.edf
+Seizure 1 Start Time: 1986 seconds
+Seizure 1 End Time: 2000 seconds
+chb14/chb14_04.edf
+Seizure 1 Start Time: 1372 seconds
+Seizure 1 End Time: 1392 seconds
+Seizure 2 Start Time: 2817 seconds
+Seizure 2 End Time: 2839 seconds
+chb14/chb14_06.edf
+Seizure 1 Start Time: 1911 seconds
+Seizure 1 End Time: 1925 seconds
+chb14/chb14_11.edf
+Seizure 1 Start Time: 1838 seconds
+Seizure 1 End Time: 1879 seconds
+chb14/chb14_17.edf
+Seizure 1 Start Time: 3239 seconds
+Seizure 1 End Time: 3259 seconds
+chb14/chb14_18.edf
+Seizure 1 Start Time: 1039 seconds
+Seizure 1 End Time: 1061 seconds
+chb14/chb14_27.edf
+Seizure 1 Start Time: 2833 seconds
+Seizure 1 End Time: 2849 seconds
+chb15/chb15_06.edf
+Seizure 1 Start Time: 272 seconds
+Seizure 1 End Time: 397 seconds
+chb15/chb15_10.edf
+Seizure 1 Start Time: 1082 seconds
+Seizure 1 End Time: 1113 seconds
+chb15/chb15_15.edf
+Seizure 1 Start Time: 1591 seconds
+Seizure 1 End Time: 1748 seconds
+chb15/chb15_17.edf
+Seizure 1 Start Time: 1925 seconds
+Seizure 1 End Time: 1960 seconds
+chb15/chb15_20.edf
+Seizure 1 Start Time: 607 seconds
+Seizure 1 End Time: 662 seconds
+chb15/chb15_22.edf
+Seizure 1 Start Time: 760 seconds
+Seizure 1 End Time: 965 seconds
+chb15/chb15_28.edf
+Seizure 1 Start Time: 876 seconds
+Seizure 1 End Time: 1066 seconds
+chb15/chb15_31.edf
+Seizure 1 Start Time: 1751 seconds
+Seizure 1 End Time: 1871 seconds
+chb15/chb15_40.edf
+Seizure 1 Start Time: 834 seconds
+Seizure 1 End Time: 894 seconds
+Seizure 2 Start Time: 2378 seconds
+Seizure 2 End Time: 2497 seconds
+Seizure 3 Start Time: 3362 seconds
+Seizure 3 End Time: 3425 seconds
+chb15/chb15_46.edf
+Seizure 1 Start Time: 3322 seconds
+Seizure 1 End Time: 3429 seconds
+chb15/chb15_49.edf
+Seizure 1 Start Time: 1108 seconds
+Seizure 1 End Time: 1248 seconds
+chb15/chb15_52.edf
+Seizure 1 Start Time: 778 seconds
+Seizure 1 End Time: 849 seconds
+chb15/chb15_54.edf
+Seizure 1 Start Time: 263 seconds
+Seizure 1 End Time: 318 seconds
+Seizure 2 Start Time: 843 seconds
+Seizure 2 End Time: 1020 seconds
+Seizure 3 Start Time: 1524 seconds
+Seizure 3 End Time: 1595 seconds
+Seizure 4 Start Time: 2179 seconds
+Seizure 4 End Time: 2250 seconds
+Seizure 5 Start Time: 3428 seconds
+Seizure 5 End Time: 3460 seconds
+chb15/chb15_62.edf
+Seizure 1 Start Time: 751 seconds
+Seizure 1 End Time: 859 seconds
+chb16/chb16_10.edf
+Seizure 1 Start Time: 2290 seconds
+Seizure 1 End Time: 2299 seconds
+chb16/chb16_11.edf
+Seizure 1 Start Time: 1120 seconds
+Seizure 1 End Time: 1129 seconds
+chb16/chb16_14.edf
+Seizure 1 Start Time: 1854 seconds
+Seizure 1 End Time: 1868 seconds
+chb16/chb16_16.edf
+Seizure 1 Start Time: 1214 seconds
+Seizure 1 End Time: 1220 seconds
+chb16/chb16_17.edf
+chb16/chb16_18.edf
+Seizure 1 Start Time: 227 seconds
+Seizure 1 End Time: 236 seconds
+Seizure 2 Start Time: 1694 seconds
+Seizure 2 End Time: 1700 seconds
+Seizure 3 Start Time: 2162 seconds
+Seizure 3 End Time: 2170 seconds
+Seizure 4 Start Time: 3290 seconds
+Seizure 4 End Time: 3298 seconds
+chb17/chb17a_03.edf
+Seizure 1 Start Time: 2282 seconds
+Seizure 1 End Time: 2372 seconds
+chb17/chb17a_04.edf
+Seizure 1 Start Time: 3025 seconds
+Seizure 1 End Time: 3140 seconds
+chb17/chb17b_63.edf
+Seizure 1 Start Time: 3136 seconds
+Seizure 1 End Time: 3224 seconds
+chb18/chb18_29.edf
+Seizure 1 Start Time: 3477 seconds
+Seizure 1 End Time: 3527 seconds
+chb18/chb18_30.edf
+Seizure 1 Start Time: 541 seconds
+Seizure 1 End Time: 571 seconds
+chb18/chb18_31.edf
+Seizure 1 Start Time: 2087 seconds
+Seizure 1 End Time: 2155 seconds
+chb18/chb18_32.edf
+Seizure 1 Start Time: 1908 seconds
+Seizure 1 End Time: 1963 seconds
+chb18/chb18_35.edf
+Seizure 1 Start Time: 2196 seconds
+Seizure 1 End Time: 2264 seconds
+chb18/chb18_36.edf
+Seizure 1 Start Time: 463 seconds
+Seizure 1 End Time: 509 seconds
+chb19/chb19_28.edf
+Seizure 1 Start Time: 299 seconds
+Seizure 1 End Time: 377 seconds
+chb19/chb19_29.edf
+Seizure 1 Start Time: 2964 seconds
+Seizure 1 End Time: 3041 seconds
+chb19/chb19_30.edf
+Seizure 1 Start Time: 3159 seconds
+Seizure 1 End Time: 3240 seconds
+chb20/chb20_12.edf
+Seizure 1 Start Time: 94 seconds
+Seizure 1 End Time: 123 seconds
+chb20/chb20_13.edf
+Seizure 1 Start Time: 1440 seconds
+Seizure 1 End Time: 1470 seconds
+Seizure 2 Start Time: 2498 seconds
+Seizure 2 End Time: 2537 seconds
+chb20/chb20_14.edf
+Seizure 1 Start Time: 1971 seconds
+Seizure 1 End Time: 2009 seconds
+chb20/chb20_15.edf
+Seizure 1 Start Time: 390 seconds
+Seizure 1 End Time: 425 seconds
+Seizure 2 Start Time: 1689 seconds
+Seizure 2 End Time: 1738 seconds
+chb20/chb20_16.edf
+Seizure 1 Start Time: 2226 seconds
+Seizure 1 End Time: 2261 seconds
+chb20/chb20_68.edf
+Seizure 1 Start Time: 1393 seconds
+Seizure 1 End Time: 1432 seconds
+chb21/chb21_19.edf
+Seizure 1 Start Time: 1288 seconds
+Seizure 1 End Time: 1344 seconds
+chb21/chb21_20.edf
+Seizure 1 Start Time: 2627 seconds
+Seizure 1 End Time: 2677 seconds
+chb21/chb21_21.edf
+Seizure 1 Start Time: 2003 seconds
+Seizure 1 End Time: 2084 seconds
+chb21/chb21_22.edf
+Seizure 1 Start Time: 2553 seconds
+Seizure 1 End Time: 2565 seconds
+chb22/chb22_20.edf
+Seizure 1 Start Time: 3367 seconds
+Seizure 1 End Time: 3425 seconds
+chb22/chb22_25.edf
+Seizure 1 Start Time: 3139 seconds
+Seizure 1 End Time: 3213 seconds
+chb22/chb22_38.edf
+Seizure 1 Start Time: 1263 seconds
+Seizure 1 End Time: 1335 seconds
+chb23/chb23_06.edf
+Seizure 1 Start Time: 3962 seconds
+Seizure 1 End Time: 4075 seconds
+chb23/chb23_08.edf
+Seizure 1 Start Time: 325 seconds
+Seizure 1 End Time: 345 seconds
+Seizure 2 Start Time: 5104 seconds
+Seizure 2 End Time: 5151 seconds
+chb23/chb23_09.edf
+Seizure 1 Start Time: 2589 seconds
+Seizure 1 End Time: 2660 seconds
+Seizure 2 Start Time: 6885 seconds
+Seizure 2 End Time: 6947 seconds
+Seizure 3 Start Time: 8505 seconds
+Seizure 3 End Time: 8532 seconds
+Seizure 4 Start Time: 9580 seconds
+Seizure 4 End Time: 9664 seconds
+chb24/chb24_01.edf
+Seizure Start Time: 480 seconds
+Seizure End Time: 505 seconds
+Seizure Start Time: 2451 seconds
+Seizure End Time: 2476 seconds
+chb24/chb24_03.edf
+Seizure Start Time: 231 seconds
+Seizure End Time: 260 seconds
+Seizure Start Time: 2883 seconds
+Seizure End Time: 2908 seconds
+chb24/chb24_04.edf
+Seizure Start Time: 1088 seconds
+Seizure End Time: 1120 seconds
+Seizure Start Time: 1411 seconds
+Seizure End Time: 1438 seconds
+Seizure Start Time: 1745 seconds
+Seizure End Time: 1764 seconds
+chb24/chb24_06.edf
+Seizure Start Time: 1229 seconds
+Seizure End Time: 1253 seconds
+chb24/chb24_07.edf
+Seizure Start Time: 38 seconds
+Seizure End Time: 60 seconds
+chb24/chb24_09.edf
+Seizure Start Time: 1745 seconds
+Seizure End Time: 1764 seconds
+chb24/chb24_11.edf
+Seizure Start Time: 3527 seconds
+Seizure End Time: 3597 seconds
+chb24/chb24_13.edf
+Seizure Start Time: 3288 seconds
+Seizure End Time: 3304 seconds
+chb24/chb24_14.edf
+Seizure Start Time: 1939 seconds
+Seizure End Time: 1966 seconds
+chb24/chb24_15.edf
+Seizure Start Time: 3552 seconds
+Seizure End Time: 3569 seconds
+chb24/chb24_17.edf
+Seizure Start Time: 3515 seconds
+Seizure End Time: 3581 seconds
+chb24/chb24_21.edf
+Seizure Start Time: 2804 seconds
+Seizure End Time: 2872 seconds

@@ -48,28 +48,35 @@ baseline_logistic = LogisticRegression(random_state = 0)
 baseline_logistic.fit(feat1_train, y_train)
 
 
-baseline_predicts = baseline_logistic.predict(feat1_test)
-baseline_cm = confusion_matrix(baseline_predicts, y_test)
-tn, fp, fn, tp = baseline_cm.ravel() 
-misclass_err = float(1069 +51) / (51 + 347689 + 1069) #0.0032109263235753664
-baseline_pos = float(tp) / (tp + fp)
+#baseline_predicts = baseline_logistic.predict(feat1_test)
+#baseline_cm = confusion_matrix(baseline_predicts, y_test)
+#tn, fp, fn, tp = baseline_cm.ravel() 
+#misclass_err = float(1069 +51) / (51 + 347689 + 1069) #0.0032109263235753664
+#baseline_pos = float(tp) / (tp + fp)
 
 
 oracle_logistic = LogisticRegression(random_state = 0)
 oracle_logistic.fit(oracle_train, y_train)
 
+#oracle only
 oracle_predicts = oracle_logistic.predict(oracle_test)
 oracle_cm = confusion_matrix(oracle_predicts, y_test)
 tn, fp, fn, tp = oracle_cm.ravel()
 misclass_err = float(fp + fn) / (tn + tp + fn + fp) #0.0030647144999125598
 oracle_sensitivity = float(tp) / (tp + fn)
 
+#all feature plus oracle
 oracle_logistic2 = LogisticRegression(random_state = 0)
 oracle_logistic2.fit(X_train, y_train)
 oracle_predicts2 = oracle_logistic2.predict(X_test)
 oracle_cm2 = confusion_matrix(oracle_predicts2, y_test)
 
-
+#baseline using simple logic test
+baseline2_predicts = np.where(feat1_test > feat1_train.mean(), 1, 0)
+baseline2_cm = confusion_matrix(baseline2_predicts, y_test)
+tn, fp, fn, tp = oracle_cm.ravel()
+misclass_err = float(fp + fn) / (tn + tp + fn + fp)#0.3927392928508152
+baseline2_sensitivity = float(tp) / (tp + fn) #0.0053640571777926575
 
 
 

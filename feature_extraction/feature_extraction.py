@@ -37,7 +37,7 @@ def data_labeling():
 	for file in files:
 		if file[:-4] in seizure_labels_map.keys():
 			util.label(directory+file,seizure_labels_map[file[:-4]])
-		util.label(directory + file, [])
+		else: util.label(directory + file, [])
 			
 def findCommonChannels():
 	parent_dir = "/Users/gustavochavez/Documents/Data/CS221_project_data/physionet.org/pn6/chbmit"
@@ -56,9 +56,10 @@ def findCommonChannels():
 	result = [] 
 	print(str(channels) + str(max(channels, key=channels.get)))
 	for v,k in channels.items():
-		if k == 682:
+		if k >= 682:
 			result.append(v)
 	print("the result is " + str(result) + " with a length of " + str(len(result)))
 #main()
-data_labeling()
+
+main()
 

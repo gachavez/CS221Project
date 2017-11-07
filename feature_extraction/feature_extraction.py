@@ -61,5 +61,5 @@ def findCommonChannels():
 	print("the result is " + str(result) + " with a length of " + str(len(result)))
 #main()
 
-main()
+data_labeling()
 

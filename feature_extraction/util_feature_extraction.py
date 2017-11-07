@@ -156,7 +156,6 @@ def label(directory, labels):
 	H,W = data.shape
 	label_col = np.zeros((H,1))
 	label_col_oracle =  np.zeros((H,1))
-	print(str(labels))
 	for label in labels:
 		start_row = label[0] // 2
 		end_row   = label[1] // 2
@@ -168,8 +167,7 @@ def label(directory, labels):
 		if oracle_start >= H - 1:
 			oracle_end =  H - 1
 		label_col_oracle[oracle_start:oracle_end + 1] = 1
-	if sum(label_col )!= 0: 
-		print(str(label_col))
+
 	data = np.hstack((data,label_col))
 	data = np.hstack((data,label_col_oracle))
 	np.savetxt(directory,data,delimiter =",")

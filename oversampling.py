@@ -10,6 +10,7 @@ from sklearn import svm
 
 #let's read in our data, set our train, validation, test sets for good
 #still using old data
+
 directory = "/Users/emily/Desktop/Q4/CS221/Project/data/feature_extraction_output_v1/"
 df = np.zeros([1,34])
 count = 0

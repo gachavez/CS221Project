@@ -33,7 +33,7 @@ optimizer = torch.optim.SGD(model.parameters(),lr=0.1)
 
 #start to learn
 
-for epoch in range(500):
+for epoch in range(2000):
 	y_pred = model(X_train)
 	loss = criterion(y_pred,y_train)
 	print(epoch,loss.data[0])

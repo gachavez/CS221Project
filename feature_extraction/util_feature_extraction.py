@@ -1,13 +1,13 @@
-
 import numpy as np
 import pyedflib
 import scipy.signal as signal
+import matplotlib.pyplot as plt
 import os
 
-#Funciton to load 1 file of EEG data 
-def loadSingleEDF(file_dir):
+#Funciton to load 1 file of EEG data
+def loadSingleEDF():
 	#name should be relative directory from where feature_extraction.py is located
-	
+	file_dir = "/Users/gustavochavez/Documents/GitHub/CS221Project/test_data"
 	f = pyedflib.EdfReader(file_dir)
 	n = f.signals_in_file
 	signal_labels = f.getSignalLabels()
@@ -23,35 +23,49 @@ def calculateRMS(signal):
 	return np.sqrt(np.dot(signal,signal) / timeLength)
 
 def butter_bandpass(lowcut, highcut, fs, order=5):
-    nyq = 0.5 * fs
-    low = lowcut / nyq
-    high = highcut / nyq
-    b, a = signal.butter(order, [low, high], btype='band')
-    return b, a
+	nyq = 0.5 * fs
+	low = lowcut / nyq
+	high = highcut / nyq
+	b, a = signal.butter(order, [low, high], btype='band')
+	return b, a
 
 def butter_bandpass_filter(data, lowcut, highcut, fs, order=5):
-    b, a = butter_bandpass(lowcut, highcut, fs, order=order)
-    y = signal.lfilter(b, a, data)
-    return y
+	b, a = butter_bandpass(lowcut, highcut, fs, order=order)
+	y = signal.lfilter(b, a, data)
+	return y
 
-def makePlotWithFiltered(unfiltered):
-	#Make butterworth filters one for 1-12 hz 
+def makePlotWithFiltered():
+	#Make butterworth filters one for 1-12 hz
+	file_dir = "/Users/gustavochavez/documents/Data/CS221_project_data/physionet.org/pn6/temp/chb01/chb01_03.edf"
+	f = pyedflib.EdfReader(file_dir)
+	n = f.signals_in_file
+	signal_labels = f.getSignalLabels()
+	sigbufs = np.zeros((n, f.getNSamples()[0]))
+	for i in np.arange(n):
+		sigbufs[i, :] = f.readSignal(i)
 	fs = 256.0
 	low = 1
 	med= 12
 	high = 24
+	unfiltered = sigbufs[2,:]
+
 	t = np.arange(0.0,5.0,.00390625)
-	plt.plot(t,unfiltered, label="Unfiltered")
-	filtered = butter_bandpass_filter(channel_1,low,med,fs)
-	plt.plot(t,filtered,label="low band")
-	filtered2 = butter_bandpass_filter(channel_1,med,high,fs)
+	l = len(t)
+
+	#plt.plot(t,unfiltered[:l], label="Unfiltered")
+	#plt.show()
+	#filtered = butter_bandpass_filter(unfiltered[:l],low,med,fs)
+	#plt.plot(t,filtered,label="low band")
+	#plt.show()
+	filtered2 = butter_bandpass_filter(unfiltered[:l],med,high,fs)
 	plt.plot(t,filtered2,label="high band")
 	plt.show()
 
 def extract_features_2(raw_signal,signal_labels):
 	#This function filters raw_sigals using two butterworthfilters of ranges .5 to 12
-	#hz and 12 hz to 24 hz following Shoeb et. al paper 
-	#returns a matrix with features with row a 2 second segment 
+	#hz and 12 hz to 24 hz following Shoeb et. al paper
+	#returns a matrix with features with row a 2 second segment
+
 	fs = 256.0
 	low = .5
 	med= 12
@@ -72,21 +86,21 @@ def extract_features_2(raw_signal,signal_labels):
 
 	filtered = []
 	for channel in channels:
-		#figure how how to make list of functions that does filtering 
+		#figure how how to make list of functions that does filtering
 		filtered.extend([butter_bandpass_filter(channel,low,med,fs)])
 		filtered.extend([butter_bandpass_filter(channel,med,high,fs)])
 
 	for seg in xrange(0,num_2_sec_segments):
 		for i,filtered_signal in enumerate(filtered):
 			feature_matrix[seg,i] = calculateRMS(filtered_signal[seg*512:seg*512 + 512])
-	
+
 	return feature_matrix
 
 
 def extract_features_8(raw_signal,signal_labels):
 	#This function filters raw_sigals using two butterworthfilters of ranges .5 to 12
-	#hz and 12 hz to 24 hz following Shoeb et. al paper 
-	#returns a matrix with features with row a 2 second segment 
+	#hz and 12 hz to 24 hz following Shoeb et. al paper
+	#returns a matrix with features with row a 2 second segment
 	fs = 256.0
 	samples_per_seg = 512
 	low = 1
@@ -107,27 +121,27 @@ def extract_features_8(raw_signal,signal_labels):
 
 	filtered = []
 	for channel in channels:
-		#figure how how to make list of functions that does filtering 
+		#figure how how to make list of functions that does filtering
 		for i in xrange(0,8):
 			filtered.extend([butter_bandpass_filter(channel,i*filter_band_width + low,(i + 1) * filter_band_width + low,fs)])
 
 	for seg in xrange(0,num_2_sec_segments):
 		for i,filtered_signal in enumerate(filtered):
 			feature_matrix[seg,i] = calculateRMS(filtered_signal[seg*samples_per_seg:seg*samples_per_seg + samples_per_seg])
-	
+
 	return feature_matrix
 def representsInt(s):
-    try: 
-        int(s)
-        return True
-    except ValueError:
-        return False
+	try:
+		int(s)
+		return True
+	except ValueError:
+		return False
 def loadLabels():
 	file_object  = open("/Users/gustavochavez/Documents/GitHub/CS221Project/feature_extraction/labels.txt", 'r')
-	text = file_object.readlines() 
+	text = file_object.readlines()
 	end = len(text)
 	current_line = 0
-	labels = {} 
+	labels = {}
 	while(current_line < end):
 		key = text[current_line]
 		#remove \n symbol
@@ -135,7 +149,7 @@ def loadLabels():
 		key = key.split("/")[1]
 		value = []
 		current_line = current_line + 1
-		while(text[current_line][0] != "c"): 
+		while(text[current_line][0] != "c"):
 			index = 3
 			if (representsInt(text[current_line].split(" ")[3])):
 				index = 3
@@ -147,7 +161,7 @@ def loadLabels():
 			current_line = current_line + 2
 			if current_line >= end:
 				break
-		
+
 		labels[key] = value
 	return labels
 def label(directory, labels):
@@ -181,9 +195,4 @@ def countChannels(directory, channels):
 		if channel in channels.keys():
 			channels[channel] = channels[channel] + 1
 		else:
-			channels[channel] = 0 
-
-
-
-
-
+			channels[channel] = 0

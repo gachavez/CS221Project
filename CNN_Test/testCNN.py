@@ -9,38 +9,38 @@ num_epochs = 5
 batch_size = 100
 learning_rate = 0.001
 
-print 'loading training set...'
+print('loading training set...')
 train_dataset = loadData.EpilepsyTrain()
 train_loader = DataLoader(dataset=train_dataset, batch_size = batch_size, shuffle=True)
-print 'training set loaded'
+print('training set loaded')
 
-print 'loading test set...'
+print('loading test set...')
 test_dataset = loadData.EpilepsyTest()
 test_loader = DataLoader(dataset=test_dataset, batch_size = batch_size, shuffle=False)
-print 'test set loaded'
+print('test set loaded')
 
 class CNN(nn.Module):
     def __init__(self):
         super(CNN, self).__init__()
         self.layer1 = nn.Sequential(
-            nn.Conv1d(4, 4, kernel_size=2, padding=1),
-            nn.BatchNorm1d(16),
+            nn.Conv2d(1, 10, kernel_size=2, padding=1),
+            nn.BatchNorm2d(10),
             nn.ReLU(),
-            nn.MaxPool1d(1))
+            nn.MaxPool2d(2))
         self.layer2 = nn.Sequential(
-            nn.Conv1d(16, 32, kernel_size=2, padding=1),
-            nn.BatchNorm1d(32),
+            nn.Conv2d(16, 32, kernel_size=2, padding=1),
+            nn.BatchNorm2d(32),
             nn.ReLU(),
-            nn.MaxPool1d(1))
+            nn.MaxPool2d(1))
         self.fc = nn.Linear(7*7*32, 2)
         
     def forward(self, x):
         out = self.layer1(x)
-        print 'layer1'
+        print('layer1')
         out = self.layer2(out)
-        print 'layer2'
+        print('layer2')
         out = out.view(out.size(0), -1)
-        print 'layer3'
+        print('layer3')
         out = self.fc(out)
         return out
 
@@ -59,9 +59,9 @@ for epoch in range(num_epochs):
         
         # Forward + Backward + Optimize
         optimizer.zero_grad()
-        print 'here1'
+        print('here1')
         outputs = cnn(images.float())
-        print 'here2'
+        print('here2')
         loss = criterion(outputs, labels)
         loss.backward()
         optimizer.step()

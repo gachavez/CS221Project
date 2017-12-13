@@ -1,19 +1,22 @@
 import torch
 import numpy as np
-import cPickle
+#import cPickle
 
 class EpilepsyTrain():
 
 	def __init__(self):
-		x = cPickle.load(open("CNN_data/xtrain3d.pkl", "rb"))
-		y = cPickle.load(open("CNN_data/ytrain.pkl", "rb"))
+		#x = cPickle.load(open("CNN_data/xtrain3d.pkl", "rb"))
+		x = np.loadtxt(open("/Users/gustavochavez/Desktop/Data/chb01_03.edf.csv", "rb"), delimiter=",")
+		#y = cPickle.load(open("CNN_data/ytrain.pkl", "rb"))
+		y = np.loadtxt(open("/Users/gustavochavez/Documents/GitHub/CS221Project/feature_extraction_output/chb01_03.edf.csv", "rb"), delimiter=",")
+		y = y[:,32]
 		self.len = x.shape[0]
-		self.x_data = torch.from_numpy(x) 
-		self.y_data = torch.from_numpy(y) 
+		self.x_data = torch.DoubleTensor(torch.from_numpy(x))
+		self.y_data = torch.DoubleTensor(torch.from_numpy(y))
 		
 
 	def __getitem__(self, index):
-		return self.x_data[index], self.y_data[index]
+		return self.x_data[index,0:256].resize_(1,16,16), self.y_data[index]
 
 	def __len__(self):
 		return self.len
@@ -21,14 +24,17 @@ class EpilepsyTrain():
 class EpilepsyTest():
 
 	def __init__(self):
-		x = cPickle.load(open("CNN_data/xtest3d.pkl", "rb"))
-		y = cPickle.load(open("CNN_data/ytest.pkl", "rb"))
+		#x = cPickle.load(open("CNN_data/xtest3d.pkl", "rb"))
+		x = np.loadtxt(open("/Users/gustavochavez/Desktop/Data/chb01_04.edf.csv", "rb"), delimiter=",")
+		#y = cPickle.load(open("CNN_data/ytest.pkl", "rb"))
+		y = np.loadtxt(open("/Users/gustavochavez/Documents/GitHub/CS221Project/feature_extraction_output/chb01_04.edf.csv", "rb"), delimiter=",")
+		y = y[:,32]
 		self.len = x.shape[0]
-		self.x_data = torch.from_numpy(x)
-		self.y_data = torch.from_numpy(y)
+		self.x_data = torch.DoubleTensor(torch.from_numpy(x))
+		self.y_data = torch.DoubleTensor(torch.from_numpy(y))
 
 	def __getitem__(self, index):
-		return self.x_data[index], self.y_data[index]
+		return self.x_data[index].resize_(1,16,16), self.y_data[index]
 
 	def __len__(self):
 		return self.len
